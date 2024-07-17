@@ -8,7 +8,7 @@
 - SOAP (Simple Object Access Protocol)
 - JWT (JSON Web Token)
 - HATEOAS (Hypermedia As The Engine Of Application State)
-# OpenAPI
+## OpenAPI
 # What are the main components of an OpenAPI specification?
 - openapi: Version of the OpenAPI Specification.
 - info: Metadata about the API.
