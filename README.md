@@ -49,5 +49,5 @@
 - Polymorphism is handled using the oneOf, anyOf, or allOf keywords in a schema definition. These keywords allow defining a schema that can be one of several types, a combination of types, or match multiple schemas.
 - anyOf: At least one schema must match.
 - oneOf: Exactly one schema must match.
-## What is the role of discriminator in OpenAPI, and how do you use it?
+## 17. What is the role of discriminator in OpenAPI, and how do you use it?
 - The discriminator property is used in schemas to aid in polymorphism. It specifies a field in the schema that indicates the type of the object, helping to differentiate between different object types within a oneOf or anyOf schema.
