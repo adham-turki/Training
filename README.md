@@ -88,7 +88,7 @@
 - Simplicity: HATEOAS encourages a more straightforward and uniform client-server interaction model by providing a standard way to navigate and interact with resources.
 ## Example 
 - When a client requests information about a book (GET /books/123), the server responds not only with the book details but also with links to related resources:
-![image](https://github.com/user-attachments/assets/4b0f4142-bd83-44b5-979f-5df82261f866)
+* ![image](https://github.com/user-attachments/assets/4b0f4142-bd83-44b5-979f-5df82261f866)
 - From this response, the client can navigate to the author's details ('/authors/douglas-adams') or retrieve reviews for the book ('/books/123/reviews').
 ## Challenges of HATEOAS:
 - Complexity: Implementing HATEOAS requires careful design to ensure that links provided are meaningful and useful to clients.
