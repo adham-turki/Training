@@ -95,4 +95,17 @@
 - Standardization: There's no strict standard for how HATEOAS links should be structured, which can lead to inconsistency in API implementations.
 ## Conclusion:
 - HATEOAS enhances the discoverability, flexibility, and simplicity of RESTful APIs by allowing clients to navigate through application state dynamically using hypermedia links. It promotes a more loosely coupled client-server interaction model, making APIs more resilient to change and easier to understand and use over time.
+# Best practice for RESTFUL API design
+1. Use Descriptive URIs: URIs should be meaningful and reflect the resource they represent. Use nouns (resources) instead of verbs (actions) in URIs. For example, '/users instead of /getUsers'.
+2. Use HTTP Methods Correctly:
+- Use GET for retrieving resources.
+- Use POST for creating resources.
+- Use PUT for updating resources (whole resource).
+- Use PATCH for updating resources (partial resource).
+- Use DELETE for deleting resources.
+3. Use HTTP Status Codes Correctly: Return appropriate status codes with responses (e.g.,'200 OK','201 Created','400 Bad Request','404 Not Found','500 Internal Server Error') to indicate the outcome of the request.
+4. Versioning: Use versioning in URIs ('/api/v1/resource') or headers ('Accept','Content-Type') to manage API changes without breaking existing clients.
+5. Use Pagination: For resources that return large collections, implement pagination (?page=1&limit=10) to improve performance and usability.
+6. Consistent Error Handling: Use consistent error formats ({"error": "message"}) for error responses to help clients handle errors uniformly.
+7. 
 
