@@ -43,5 +43,5 @@
 - Reusable components, such as schemas, responses, parameters, examples, request bodies, and headers, are defined in the components section. They can be referenced throughout the OpenAPI document to avoid duplication.
 ## 14. What are the benefits and potential drawbacks of using OpenAPI?
 - Benefits include standardized documentation, improved collaboration, automated code generation, and better API testing and validation. Drawbacks might include the initial learning curve and the effort required to keep the documentation in sync with the implementation.
-## Explain the difference between paths and components in OpenAPI.
+## 15. Explain the difference between paths and components in OpenAPI.
 - The paths section defines the available endpoints and their operations, while the components section holds reusable definitions such as schemas, parameters, responses, and security schemes. This helps keep the specification DRY (Don't Repeat Yourself).
