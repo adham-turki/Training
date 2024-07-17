@@ -107,5 +107,10 @@
 4. Versioning: Use versioning in URIs ('/api/v1/resource') or headers ('Accept','Content-Type') to manage API changes without breaking existing clients.
 5. Use Pagination: For resources that return large collections, implement pagination (?page=1&limit=10) to improve performance and usability.
 6. Consistent Error Handling: Use consistent error formats ({"error": "message"}) for error responses to help clients handle errors uniformly.
-7. 
+7. Use Security Best Practices: Implement authentication (OAuth, JWT) and authorization mechanisms to protect your API. Use HTTPS to encrypt data transmitted over the network.
+8. Request and Response Formats: Use standard data formats like JSON for request and response bodies. Provide clear documentation for expected formats.
+9. HATEOAS (Hypermedia): Consider using HATEOAS to provide navigation links dynamically in API responses to guide clients through available actions and resources.
+10. Testing and Documentation: Thoroughly test your API endpoints using automated tests (unit tests, integration tests) and document your API comprehensively (including endpoints, parameters, responses, and examples).
+11. Performance Considerations: Optimize your API for performance by caching (where appropriate), minimizing unnecessary data transfer, and using efficient data formats.
+12. Version Control and Lifecycle Management: Manage API versions carefully, provide backward compatibility where possible, and communicate changes effectively to API consumers.
 
