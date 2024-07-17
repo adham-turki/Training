@@ -113,4 +113,14 @@
 10. Testing and Documentation: Thoroughly test your API endpoints using automated tests (unit tests, integration tests) and document your API comprehensively (including endpoints, parameters, responses, and examples).
 11. Performance Considerations: Optimize your API for performance by caching (where appropriate), minimizing unnecessary data transfer, and using efficient data formats.
 12. Version Control and Lifecycle Management: Manage API versions carefully, provide backward compatibility where possible, and communicate changes effectively to API consumers.
-
+## What is a Stateless REST API?
+- A stateless REST API adheres to the principle of statelessness as defined by the REST architectural style. Stateless REST APIs do not establish or maintain client sessions. Clients are responsible for providing all necessary information in each request, such as authentication tokens, credentials, or context data. The server does not store client-specific session data.
+- The application’s session state is therefore kept entirely on the client. The client is responsible for storing and handling the session-related information on its own side.
+- This also means that the client is responsible for sending any state information to the server whenever it is needed. There should not be any session affinity or sticky session between the client and the server.
+- Statelessness means that every HTTP request happens in complete isolation. When the client makes an HTTP request, it includes all information necessary for the server to fulfill the request.
+* The server never relies on information from previous requests from the client. If any such information is important then the client will send that as part of the current request.
+- To enable clients to access these stateless APIs, it is necessary that servers also include every piece of information that the client may need to create/maintain the state on its side.
+- To become stateless, do not store even the authentication/authorization details of the client. Provide authentication credentials with each request. Thus each request MUST be stand-alone and should not be affected by the previous conversation that happened with the same client in the past.
+## Application State vs Resource State
+- Application state is server-side data that servers store to identify incoming client requests, their previous interaction details, and current context information.
+- Resource state is the current state of a resource on a server at any point in time – and it has nothing to do with the interaction between client and server. It is what we get as a response from the server as the API response. We refer to it as resource representation.
