@@ -51,3 +51,25 @@
 - oneOf: Exactly one schema must match.
 ## 17. What is the role of discriminator in OpenAPI, and how do you use it?
 - The discriminator property is used in schemas to aid in polymorphism. It specifies a field in the schema that indicates the type of the object, helping to differentiate between different object types within a oneOf or anyOf schema.
+# REST
+- A RESTful API (Representational State Transfer API) is an architectural style for designing networked applications. Here are the key principles and concepts that define RESTful APIs:
+
+1. Resource-Based: REST treats every component of a system (data, functionality, etc.) as a resource that can be accessed and manipulated using a standardized set of operations. Resources are typically identified by URIs (Uniform Resource Identifiers).
+
+2. HTTP Methods: RESTful APIs use standard HTTP methods (GET, POST, PUT, DELETE, etc.) to perform operations on resources. These methods correspond to CRUD (Create, Read, Update, Delete) operations:
+
+- GET: Retrieve a resource.
+- POST: Create a new resource.
+- PUT: Update an existing resource.
+- DELETE: Remove a resource.
+3. Stateless Communication: Each request from a client to the server must contain all the information necessary to understand and fulfill the request. The server should not store the client's state between requests. This simplifies server implementation and improves scalability.
+
+4. Representation of Resources: Resources are typically represented in JSON or XML format. JSON has become more common due to its lightweight and easy-to-parse nature.
+
+5. Hypermedia as the Engine of Application State (HATEOAS): This principle suggests that a client interacting with a server application should receive hypermedia links in the responses, dynamically directing the client to the appropriate next steps or actions. This makes the API self-descriptive and helps guide the client through available actions.
+
+6. Layered System: A client interacts with the API without knowing the internal workings of the server, enhancing scalability by allowing different parts of the system to evolve independently.
+
+7. Cacheability: Responses from the server can be labeled as cacheable or non-cacheable. This allows clients to reuse responses, reducing the number of requests and improving performance.
+
+- RESTful APIs are widely used for building web services due to their simplicity, scalability, and compatibility with HTTP. They provide a structured way to expose and consume data and functionalities over the internet.
