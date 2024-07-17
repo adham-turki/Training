@@ -10,6 +10,7 @@
 - HATEOAS (Hypermedia As The Engine Of Application State)
 # OpenAPI
 ## What are the main components of an OpenAPI specification?
+- openapi : the version of the openapi
 - info: Metadata about the API.
 - Servers : specifies the base URLs for your API. These base URLs are used by the clients to connect to your API .
 - paths: Defines the available endpoints and operations.
