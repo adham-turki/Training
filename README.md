@@ -1,4 +1,3 @@
-# First Day
 # Topics 
 - XML (extensible Markup Language)
 - JSON (JavaScript Object Notation)
@@ -9,6 +8,7 @@
 - SOAP (Simple Object Access Protocol)
 - JWT (JSON Web Token)
 - HATEOAS (Hypermedia As The Engine Of Application State)
+# OpenAPI
 # What are the main components of an OpenAPI specification?
 - openapi: Version of the OpenAPI Specification.
 - info: Metadata about the API.
