@@ -45,3 +45,9 @@
 - Benefits include standardized documentation, improved collaboration, automated code generation, and better API testing and validation. Drawbacks might include the initial learning curve and the effort required to keep the documentation in sync with the implementation.
 ## 15. Explain the difference between paths and components in OpenAPI.
 - The paths section defines the available endpoints and their operations, while the components section holds reusable definitions such as schemas, parameters, responses, and security schemes. This helps keep the specification DRY (Don't Repeat Yourself).
+## 16. How do you handle polymorphism in OpenAPI?
+- Polymorphism is handled using the oneOf, anyOf, or allOf keywords in a schema definition. These keywords allow defining a schema that can be one of several types, a combination of types, or match multiple schemas.
+- anyOf: At least one schema must match.
+- oneOf: Exactly one schema must match.
+## What is the role of discriminator in OpenAPI, and how do you use it?
+- The discriminator property is used in schemas to aid in polymorphism. It specifies a field in the schema that indicates the type of the object, helping to differentiate between different object types within a oneOf or anyOf schema.
