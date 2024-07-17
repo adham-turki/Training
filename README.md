@@ -17,9 +17,9 @@
 - components: Reusable objects and schemas.
 - security: Security schemes and requirements.
 - externalDocs :used to provide additional external documentation for an API. This object allows you to specify a URL that points to detailed information or supplementary documentation that is not included directly within the OpenAPI specification document.
- ## What is the purpose of the info object in an OpenAPI specification?
+## What is the purpose of the info object in an OpenAPI specification?
  - The info object provides metadata about the API such as title, version, description, and contact information. It helps consumers understand the API's purpose and usage.
- ## How do you handle pagination in OpenAPI?
+## How do you handle pagination in OpenAPI?
 - Answer: Pagination can be handled using query parameters (page, limit) within the parameters object of an operation.
 ## How can you document API request payloads in OpenAPI?
 - Request payloads are documented using the requestBody object within an operation. It specifies the content type and schema of the request body. 
