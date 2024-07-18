@@ -7,6 +7,7 @@
 - REST (Representational State Transfer)
 - SOAP (Simple Object Access Protocol)
 - JWT (JSON Web Token)
+- RPC API (Remote Procedure Calls)
 - HATEOAS (Hypermedia As The Engine Of Application State)
 # OpenAPI
 ## 1. What are the main components of an OpenAPI specification?
@@ -124,3 +125,6 @@
 ## Application State vs Resource State
 - Application state is server-side data that servers store to identify incoming client requests, their previous interaction details, and current context information.
 - Resource state is the current state of a resource on a server at any point in time – and it has nothing to do with the interaction between client and server. It is what we get as a response from the server as the API response. We refer to it as resource representation.
+# API Patterns
+https://www.linkedin.com/pulse/api-design-patterns-best-practices-building-robust-apis/
+
