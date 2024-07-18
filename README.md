@@ -126,5 +126,9 @@
 - Application state is server-side data that servers store to identify incoming client requests, their previous interaction details, and current context information.
 - Resource state is the current state of a resource on a server at any point in time – and it has nothing to do with the interaction between client and server. It is what we get as a response from the server as the API response. We refer to it as resource representation.
 # API Patterns
-https://www.linkedin.com/pulse/api-design-patterns-best-practices-building-robust-apis/
-
+- https://www.linkedin.com/pulse/api-design-patterns-best-practices-building-robust-apis/
+- https://cleancommit.io/blog/mastering-api-design-patterns-best-practices-and-common-patterns/
+- https://medium.com/@patricksavalle/rest-api-design-as-a-craft-not-an-art-a3fd97ed3ef4
+- https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
+- https://dzone.com/articles/a-look-at-rest-api-design-patterns
+- https://medium.com/@amitkhullaar/api-design-patterns-and-implementation-386c6b8946f7
