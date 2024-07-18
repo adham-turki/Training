@@ -1,4 +1,5 @@
 # Topics 
+- URL (Universal Resourse Locater )
 - XML (extensible Markup Language)
 - JSON (JavaScript Object Notation)
 - YAML (YAML Ain't Markup Language)
@@ -140,3 +141,7 @@
 5. Circuit-breaker
 6. Publish-subscribe
 7. Authentication and authorization
+# REST-HTTP
+- On the internet of things everything is either a REST-server or a REST-client. Or both.
+- A REST-API is the collection of HTTP-requests that a REST-server can respond on.
+- A RESTful HTTP-request is ‘a query or manipulation on a server-resource addressed by an URL’.
