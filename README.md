@@ -132,3 +132,11 @@
 - https://learn.microsoft.com/en-us/azure/architecture/best-practices/api-design
 - https://dzone.com/articles/a-look-at-rest-api-design-patterns
 - https://medium.com/@amitkhullaar/api-design-patterns-and-implementation-386c6b8946f7
+## Common API design patterns
+1. Versioning
+2. Caching
+3. Pagination
+4. Rate limiting
+5. Circuit-breaker
+6. Publish-subscribe
+7. Authentication and authorization
