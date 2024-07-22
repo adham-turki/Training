@@ -10,6 +10,7 @@
 - JWT (JSON Web Token)
 - RPC API (Remote Procedure Calls)
 - HATEOAS (Hypermedia As The Engine Of Application State)
+- CORS (Cross-Origin Resource Sharing)
 # OpenAPI
 ## 1. What are the main components of an OpenAPI specification?
 - openapi : the version of the openapi
