@@ -218,4 +218,4 @@
 
 4. Access to Restricted Content: To bypass geographic or network-based restrictions.
 
-- In summary, proxies are versatile tools that enhance security, privacy, performance, and manageability in networked environments.
+### In summary, proxies are versatile tools that enhance security, privacy, performance, and manageability in networked environments.
