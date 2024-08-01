@@ -223,7 +223,7 @@
 ## 1. T-Shaped Engineer
 - Shape: The "T" shape represents a combination of deep expertise in one specific area (the vertical bar) and a broad understanding of other related areas (the horizontal bar).
 
-### Role and Contribution:
+#### Role and Contribution:
 
 - Depth: Possesses deep knowledge and skills in a specific domain or technology (e.g., software development, mechanical engineering).
 - Breadth: Has a broad understanding of other areas or disciplines, allowing for cross-functional collaboration and integration.
@@ -231,34 +231,34 @@
 ## 2. I-Shaped Engineer
 - Shape: The "I" shape represents deep expertise in one particular area without much breadth beyond that expertise.
 
-### Role and Contribution:
+#### Role and Contribution:
 
 - Depth: Focuses on one specific area or technology, providing in-depth knowledge and specialized skills.
 - Team Dynamics: I-shaped engineers are crucial for tasks requiring deep technical expertise. They often drive innovation and high-quality work in their specialized domain but may need support from others for broader project aspects.
 ## 3. Pi-Shaped Engineer
 - Shape: The "Pi" shape extends the T-shaped model with additional depth in two areas, reflecting both broad knowledge and multiple areas of deep expertise.
 
-### Role and Contribution:
+#### Role and Contribution:
 
 - Dual Depth: Possesses deep expertise in two different areas, along with a broad understanding of related fields.
 - Team Dynamics: Pi-shaped engineers can handle complex projects that require expertise in multiple domains. They are versatile and can provide valuable insights across different areas, enhancing collaboration and innovation.
 ## 4. M-Shaped Engineer
 - Shape: The "M" shape represents depth in multiple areas and broad knowledge, reflecting a more complex skill set with expertise in several domains.
 
-### Role and Contribution:
+#### Role and Contribution:
 
 - Multiple Depths: Deep expertise in several different areas, combined with broad knowledge of related fields.
 - Team Dynamics: M-shaped engineers are highly versatile and can contribute to various aspects of a project. They can provide leadership and insight across multiple areas but may require strong coordination and communication to effectively manage their diverse responsibilities.
 ## 5. Comb-Shaped Engineer
 
 - Shape: The "Comb" shape represents a broad set of skills and knowledge across many areas, with varying levels of expertise in each.
-### Role and Contribution:
+#### Role and Contribution:
 - Broad Knowledge: Has a wide range of skills and knowledge but may not have deep expertise in any single area.
 - Team Dynamics: Comb-shaped engineers are valuable for their ability to adapt to different roles and support various aspects of a project. They excel in roles that require general knowledge and versatility but may rely on specialists for in-depth tasks.
 ## 6. U-Shaped Engineer
 
 - Shape: The "U" shape represents a combination of broad knowledge and deep expertise in a particular area, followed by a return to broader understanding.
-### Role and Contribution:
+#### Role and Contribution:
 - Broad Foundation: Starts with a broad foundation of knowledge in various areas, providing context and understanding of different disciplines.
 - Deep Specialization: Develops deep expertise in a specific area, becoming a subject matter expert.
 - Return to Broad Perspective: Gathers additional broad insights after specialization, integrating expertise with a comprehensive view of related fields.
@@ -271,3 +271,303 @@
 - Versatility and Adaptability: Engineers with a broad skill set (Comb-shaped) can adapt to different roles and provide support across multiple areas, enhancing team flexibility and responsiveness to project needs.
 
 - Holistic Problem-Solving: Engineers with both depth and breadth (T-shaped, Pi-shaped, U-shaped) contribute to holistic problem-solving by understanding both specialized and related areas, leading to more comprehensive and innovative solutions.
+# Rate Limiter
+- A rate limiter is a mechanism used to control the rate at which requests or operations are processed, ensuring that a system is not overwhelmed by too many requests in a short period. Rate limiting is commonly used in various applications, such as APIs, web services, and network services, to prevent abuse, ensure fair usage, and maintain system stability.
+### Key Concepts
+- Rate Limiting: The process of restricting the number of requests or operations a user, client, or system can perform within a specified time window.
+- Quota: The maximum allowed requests or operations within a given period.
+- Throttling: The act of delaying or restricting requests to adhere to the rate limit.
+### Common Types of Rate Limiting
+#### 1. Fixed Window Counter
+
+- Description: Limits requests based on fixed time windows, such as 1 minute or 1 hour. Requests are counted within each time window, and if the limit is exceeded, further requests are denied until the window resets.
+- Example: Allowing 100 requests per hour.
+- Pros: Simple to implement and understand.
+- Cons: Can lead to "burstiness" issues, where many requests are allowed just before the window resets.
+#### 2. Sliding Window Log
+
+- Description: Keeps a log of request timestamps and allows requests as long as the number of requests in the most recent time window is within the limit. The window "slides" over time, providing a more granular control compared to fixed windows.
+- Example: Allowing 100 requests in the last 60 minutes.
+- Pros: Provides a smoother and more consistent rate limiting compared to fixed windows.
+- Cons: More complex to implement and can require more storage for request logs.
+#### 3. Sliding Window Counter
+
+- Description: Combines elements of both fixed window and sliding window techniques. It divides the time window into smaller intervals and keeps a count of requests in each interval. The overall limit is enforced by aggregating counts from the intervals.
+- Example: Allowing 100 requests per hour, with the hour divided into 5-minute intervals.
+- Pros: Offers a balance between simplicity and smooth rate limiting.
+- Cons: Can still experience some burstiness near window boundaries.
+#### 4. Token Bucket
+
+- Description: Uses a "bucket" that fills with tokens at a constant rate. Each request consumes a token, and if the bucket is empty, requests are denied until tokens are replenished. The bucket allows for bursts of traffic but enforces a long-term average rate limit.
+- Example: A bucket that refills with 10 tokens per minute, with each request consuming 1 token.
+- Pros: Allows for bursts of requests while maintaining a consistent rate over time.
+- Cons: More complex to implement compared to fixed windows and sliding windows.
+#### 5. Leaky Bucket
+
+- Description: Similar to the token bucket, but with a fixed "leak" rate at which the bucket drains. Requests are added to the bucket, and if the bucket overflows, requests are denied. This ensures a steady output rate but can handle bursts up to the capacity of the bucket.
+- Example: A bucket that leaks at 10 requests per minute, with a maximum capacity of 100 requests.
+- Pros: Provides a steady output rate and handles bursts effectively.
+- Cons: Can lead to request denial if bursts exceed the bucket capacity.
+### Use Cases for Rate Limiting
+- API Rate Limiting: Prevents abuse and ensures fair usage of API resources by limiting the number of requests a client can make in a given period.
+
+- Network Traffic Management: Controls the amount of traffic sent to or from a network, preventing congestion and ensuring smooth operation.
+
+- Login Attempts: Protects against brute-force attacks by limiting the number of login attempts within a specified time period.
+
+- Service Stability: Ensures that a service remains responsive and stable by preventing overload from excessive requests.
+# SOLID Principles
+- The SOLID principles are a set of design guidelines that help software developers create more maintainable, flexible, and scalable code. The acronym SOLID stands for five principles:
+
+- Single Responsibility Principle (SRP)
+- Open/Closed Principle (OCP)
+- Liskov Substitution Principle (LSP)
+- Interface Segregation Principle (ISP)
+- Dependency Inversion Principle (DIP)
+## 1. Single Responsibility Principle (SRP)
+- Definition: A class should have only one reason to change, meaning it should have only one responsibility or job.
+
+- Example:
+
+- Imagine a Report class that handles both the generation and the printing of reports:
+  ``` java
+  public class Report {
+    public void generateReport() {
+        // Code to generate the report
+    }
+    
+    public void printReport() {
+        // Code to print the report
+    }
+  }
+  ```
+- Violation: This class has multiple responsibilities—generating and printing reports. If the printing process changes (e.g., different format or destination), you must modify the class, affecting its generation functionality.
+
+- Improved Design:
+
+- Separate responsibilities into different classes:
+ ``` java
+ public class ReportGenerator {
+     public void generateReport() {
+         // Code to generate the report
+     }
+ }
+ 
+ public class ReportPrinter {
+     public void printReport() {
+         // Code to print the report
+     }
+ }
+```
+## 2. Open/Closed Principle (OCP)
+- Definition: Software entities (classes, modules, functions, etc.) should be open for extension but closed for modification. This means you should be able to extend a class’s behavior without changing its existing code.
+
+- Example:
+
+- Consider a class that calculates the area of different shapes:
+``` java
+public class AreaCalculator {
+    public double calculateArea(Rectangle rectangle) {
+        return rectangle.getWidth() * rectangle.getHeight();
+    }
+    
+    public double calculateArea(Circle circle) {
+        return Math.PI * circle.getRadius() * circle.getRadius();
+    }
+}
+```
+- Violation: Adding new shapes requires modifying AreaCalculator, violating the OCP.
+
+- Improved Design:
+
+- Use an interface and polymorphism:
+``` java
+public interface Shape {
+    double calculateArea();
+}
+
+public class Rectangle implements Shape {
+    private double width, height;
+    // Constructor, getters, setters
+    
+    @Override
+    public double calculateArea() {
+        return width * height;
+    }
+}
+
+public class Circle implements Shape {
+    private double radius;
+    // Constructor, getters, setters
+    
+    @Override
+    public double calculateArea() {
+        return Math.PI * radius * radius;
+    }
+}
+
+public class AreaCalculator {
+    public double calculateArea(Shape shape) {
+        return shape.calculateArea();
+    }
+}
+```
+- New shapes can be added without changing the AreaCalculator class.
+
+## 3. Liskov Substitution Principle (LSP)
+- Definition: Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program.
+
+- Example:
+
+- Consider a base class Bird with a method fly():
+``` java
+public class Bird {
+    public void fly() {
+        // Fly implementation
+    }
+}
+```
+- And a subclass Penguin that does not fly:
+``` java
+public class Penguin extends Bird {
+    @Override
+    public void fly() {
+        throw new UnsupportedOperationException("Penguins can't fly!");
+    }
+}
+```
+- Violation: Substituting Penguin where a Bird is expected breaks the expected behavior.
+
+- Improved Design:
+
+- Use an interface or base class that defines flying capability more appropriately:
+
+``` java
+public interface Flyable {
+    void fly();
+}
+
+public class Sparrow implements Flyable {
+    @Override
+    public void fly() {
+        // Fly implementation
+    }
+}
+
+public class Penguin {
+    // No fly method needed
+}
+```
+- Now, only classes that can fly implement Flyable.
+
+## 4. Interface Segregation Principle (ISP)
+- Definition: Clients should not be forced to depend on interfaces they do not use. This means that interfaces should be specific to the clients that use them.
+
+- Example:
+
+- Consider a large interface Worker with multiple methods:
+public interface Worker {
+    void work();
+    void eat();
+}
+- Violation: Implementing classes may be forced to provide unused methods.
+
+- Improved Design:
+
+- Split into smaller, specific interfaces:
+``` java
+public interface Workable {
+    void work();
+}
+
+public interface Eatable {
+    void eat();
+}
+
+public class HumanWorker implements Workable, Eatable {
+    @Override
+    public void work() {
+        // Work implementation
+    }
+    
+    @Override
+    public void eat() {
+        // Eat implementation
+    }
+}
+
+public class RobotWorker implements Workable {
+    @Override
+    public void work() {
+        // Work implementation
+    }
+}
+```
+- Clients only need to implement interfaces relevant to their responsibilities.
+
+## 5. Dependency Inversion Principle (DIP)
+- Definition: High-level modules should not depend on low-level modules. Both should depend on abstractions. Abstractions should not depend on details. Details should depend on abstractions.
+
+- Example:
+
+- Consider a class LightBulb that directly depends on Switch:
+``` java
+public class LightBulb {
+    public void turnOn() {
+        // Turn on the light bulb
+    }
+    
+    public void turnOff() {
+        // Turn off the light bulb
+    }
+}
+
+public class Switch {
+    private LightBulb lightBulb;
+    
+    public Switch(LightBulb lightBulb) {
+        this.lightBulb = lightBulb;
+    }
+    
+    public void operate() {
+        // Toggle the light bulb
+    }
+}
+```
+- Violation: The Switch class directly depends on the LightBulb class, making it hard to change or replace LightBulb.
+
+- Improved Design:
+
+- Use abstraction to decouple dependencies:
+``` java
+public interface Switchable {
+    void turnOn();
+    void turnOff();
+}
+
+public class LightBulb implements Switchable {
+    @Override
+    public void turnOn() {
+        // Turn on the light bulb
+    }
+    
+    @Override
+    public void turnOff() {
+        // Turn off the light bulb
+    }
+}
+
+public class Switch {
+    private Switchable switchable;
+    
+    public Switch(Switchable switchable) {
+        this.switchable = switchable;
+    }
+    
+    public void operate() {
+        // Toggle the switchable
+    }
+}
+```
+- Now, Switch depends on the Switchable abstraction, not on the specific implementation.
+  
