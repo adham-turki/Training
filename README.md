@@ -1,4 +1,5 @@
 # Topics 
+- DOM (Document Object Model )
 - URL (Universal Resourse Locater )
 - XML (extensible Markup Language)
 - JSON (JavaScript Object Notation)
