@@ -24,7 +24,7 @@ The render tree is built by combining the DOM and CSSOM trees. This tree contain
 ## 1. DOM (Document Object Model) Tree
 - Definition: The DOM is a tree-like structure representing the HTML document. It is an in-memory representation of the page, and each element, attribute, and text becomes a node.
 - Example:
-  ```
+  ``` html
   <html>
   <head>
     <title>Example</title>
@@ -37,7 +37,7 @@ The render tree is built by combining the DOM and CSSOM trees. This tree contain
   </html>
   ```
   - The DOM tree for the above HTML:
-  ```
+  ``` less
   html
   ├── head
   │   └── title
@@ -49,7 +49,7 @@ The render tree is built by combining the DOM and CSSOM trees. This tree contain
 ## 2. CSSOM (CSS Object Model) Tree
 - Definition: The CSSOM is a tree-like structure that represents the CSS styles. It includes all the styles defined in the CSS files, inline styles, and style tags within the HTML.
 - Example:
-```
+``` css
 #container {
   width: 100%;
   color: blue;
@@ -59,7 +59,7 @@ p {
 }
 ```
 - The CSSOM tree:
-```
+``` yaml
 CSSOM
 ├── #container
 │   ├── width: 100%
