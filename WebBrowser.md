@@ -10,7 +10,7 @@
 - Simultaneously, the browser parses the CSS files, including inline styles and stylesheets, to create the CSS Object Model (CSSOM) tree. This tree contains information about the styles that should be applied to each element.
 3. Constructing the Render Tree
 
-The render tree is built by combining the DOM and CSSOM trees. This tree contains only the elements that need to be displayed on the screen, along with their computed styles.
+- The render tree is built by combining the DOM and CSSOM trees. This tree contains only the elements that need to be displayed on the screen, along with their computed styles.
 4. Layout
 
 - Once the render tree is constructed, the browser calculates the layout of each node. This process involves determining the size and position of each element on the page. This stage is also known as reflow.
